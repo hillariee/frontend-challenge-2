@@ -23,6 +23,10 @@
     padding: 0px;
 }
 
+body{
+    background-image: url(./images/bg-intro-mobile.png);
+}
+
 .heading{
     grid-area: heading;
 }
@@ -41,7 +45,7 @@
 
 
 .container{
-    background-image: url(./images/bg-intro-mobile.png);
+    /* background-image: url(./images/bg-intro-mobile.png); */
     background-color: var(--base);
     display: grid;
     justify-content: center;
@@ -147,7 +151,29 @@ h1 > span{
     text-transform: capitalize;
 }
 
-
-
 .attribution { font-size: 11px; text-align: center; margin: auto;}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 768px){
+
+    /* body{
+        background-image: url(./images/bg-intro-desktop.png);
+    } */
+
+    .container{
+        background-image: url(./images/bg-intro-desktop.png);
+        background-color: var(--base);
+        display: grid;
+        width: calc(100vw - 20px);
+        height: calc(100vh - 20px);
+        /* justify-content: space-evenly; */
+        align-items: center;
+        grid-template-areas:
+        "... ... banner banner"
+        "heading heading form form"
+        "sub sub form form";
+        grid-column-gap: 10px;       
+    }
+}
+
+
