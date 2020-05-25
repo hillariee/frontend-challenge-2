@@ -17,8 +17,103 @@
     --font: 'Poppins', sans-serif;
 }
 
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 0px;
+}
+
+.heading{
+    grid-area: heading;
+}
+
+.sub{
+    grid-area: sub;
+}
+
+.banner{
+    grid-area: banner;
+}
+
+.form{
+    grid-area: form;
+}
 
 
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+    "heading heading"
+    "sub sub"
+    "banner banner"
+    "form form";
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+}
+
+
+h1 > span{
+    font-family: var(--font);
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    text-align: center;
+}
+
+.sub{
+    font-family: var(--font);
+    font-size: .8rem;
+    font-weight: var(--mid);
+    overflow-wrap: break-word;
+    width: 16rem;
+    text-align: center;
+    margin: auto;
+}
+
+
+.banner{
+    text-align: center;
+}
+
+.banner > p{
+    font-family:var(--font);
+    font-size: .8rem;
+}
+
+.banner > p > span{
+    font-weight: var(--semibold);
+}
+
+
+.form{
+    margin: auto;
+    text-align: center;
+}
+
+.form .form-card{
+    border: 1px solid black;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+
+.form .form-card .form-control{
+    /* font-family: var(--font); */
+}
+
+.tnc{
+    font-family: var(--font);
+    font-size: .8rem;
+    overflow-wrap: break-word;
+}
+
+.tnc a{
+    font-size: .8rem;
+    font-weight: var(--semibold);
+    text-decoration: none;
+}
 
 
 .attribution { font-size: 11px; text-align: center; }
