@@ -41,6 +41,8 @@
 
 
 .container{
+    background-image: url(./images/bg-intro-mobile.png);
+    background-color: var(--base);
     display: grid;
     justify-content: center;
     grid-template-areas:
@@ -48,11 +50,13 @@
     "sub sub"
     "banner banner"
     "form form";
+    grid-row-gap: 10px;
 }
 
 .heading{
     display: flex;
     flex-direction: column;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    color: #fff;
 }
 
 
@@ -71,16 +75,22 @@ h1 > span{
     width: 16rem;
     text-align: center;
     margin: auto;
+    color: #fff;
 }
 
 
 .banner{
     text-align: center;
+    margin: auto;
+    background-color: var(--accent);
+    border-radius: 5px;
+    width: 300px;
 }
 
 .banner > p{
     font-family:var(--font);
     font-size: .8rem;
+    color: #fff;
 }
 
 .banner > p > span{
@@ -95,8 +105,10 @@ h1 > span{
 
 .form .form-card{
     border: 1px solid black;
-    padding: 10px 10px;
+    padding: 15px 10px;
     border-radius: 7px;
+    background-color: #fff;
+    border: none;
 }
 
 .form .form-card .form-control{
@@ -106,9 +118,9 @@ h1 > span{
 .form .form-card .form-control input{
     border-radius: 3px;
     padding: 5px 3px;
-    border: thin solid var(--neutral);
+    border: thin solid var(--neutral2);
     font-weight: var(--mid);
-    font-family: var(--font)
+    font-family: var(--font);
 }
 
 .tnc{
@@ -121,12 +133,18 @@ h1 > span{
     font-size: .8rem;
     font-weight: var(--semibold);
     text-decoration: none;
+    color: var(--base);
 }
 
 .form-cta{
     padding: 10px 35px;
     font-family: var(--font);
     font-weight: var(--mid);
+    border: none;
+    border-radius: 3px;
+    background-color: var(--base2);
+    color: #fff;
+    text-transform: capitalize;
 }
 
 
