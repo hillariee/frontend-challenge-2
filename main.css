@@ -95,12 +95,20 @@ h1 > span{
 
 .form .form-card{
     border: 1px solid black;
-    padding: 5px 5px;
-    border-radius: 10px;
+    padding: 10px 10px;
+    border-radius: 7px;
 }
 
 .form .form-card .form-control{
-    /* font-family: var(--font); */
+    margin-bottom: 10px;
+}
+
+.form .form-card .form-control input{
+    border-radius: 3px;
+    padding: 5px 3px;
+    border: thin solid var(--neutral);
+    font-weight: var(--mid);
+    font-family: var(--font)
 }
 
 .tnc{
@@ -114,6 +122,13 @@ h1 > span{
     font-weight: var(--semibold);
     text-decoration: none;
 }
+
+.form-cta{
+    padding: 10px 35px;
+    font-family: var(--font);
+    font-weight: var(--mid);
+}
+
 
 
 .attribution { font-size: 11px; text-align: center; }
