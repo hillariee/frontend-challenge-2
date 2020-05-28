@@ -6,8 +6,8 @@
     --base: hsl(0, 100%, 74%);
     --base2: hsl(154, 59%, 51%);
     --accent: hsl(248, 32%, 49%);
-    --neutral: hsl(249, 10%, 26%);
-    --neutral2: hsl(246, 25%, 77%);
+    --neutral: hsla(249, 10%, 26%,.5);
+    --neutral2: hsla(246, 25%, 77%,.5);
 
     /* typography */
     --reg: 400;
@@ -23,15 +23,13 @@
     padding: 0px;
 }
 
-body{
-    background-image: url(./images/bg-intro-mobile.png);
-}
 
 .heading{
     grid-area: heading;
     overflow-wrap: break-word;
     width: 17rem;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
     color: #fff;
+    margin: auto;
 }
 
 h1{
@@ -55,20 +53,25 @@ h1{
 
 .banner{
     grid-area: banner;
-    text-align: center;
+    /* text-align: center; */
     margin: auto;
     background-color: var(--accent);
     border-radius: 5px;
     width: 300px;
-    overflow-wrap: break-word;
-    width: 15rem;
-    padding: 5px 18px
+    padding: 10px 20px;
+    -webkit-box-shadow: 0px 9px 8px -2px var(--neutral);
+    -moz-box-shadow: 0px 9px 8px -2px var(--neutral);
+    box-shadow: 0px 9px 8px -2px var(--neutral);
 }
 
 .banner > p{
     font-family:var(--font);
     font-size: .8rem;
     color: #fff;
+    overflow-wrap: break-word;
+    width: 13rem;
+    text-align: center;
+    margin: auto;
 }
 
 .banner > p > span{
@@ -106,7 +109,7 @@ h1{
     font-family: var(--font);
     font-size: .8rem;
     overflow-wrap: break-word;
-    width: 13rem;
+    width: 18rem;
 }
 
 .tnc a{
@@ -125,7 +128,7 @@ h1{
     background-color: var(--base2);
     color: #fff;
     text-transform: uppercase;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .footer{
@@ -133,7 +136,7 @@ h1{
 }
 
 .container{
-    /* background-image: url(./images/bg-intro-mobile.png); */
+    background-image: url(./images/bg-intro-mobile.png);
     background-color: var(--base);
     display: grid;
     justify-content: center;
@@ -153,12 +156,14 @@ h1{
     .heading{
         margin-top: 180px;
         position: relative;
+        right: 16%;
     }
     
 
     h1{
         font-size: 2rem;
         line-height: 2.2rem;
+        text-align: left;
     }
 
     .sub{
