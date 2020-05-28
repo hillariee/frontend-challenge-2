@@ -29,12 +29,12 @@ body{
 
 .heading{
     grid-area: heading;
-    display: flex;
-    flex-direction: column;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    overflow-wrap: break-word;
+    width: 17rem;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
     color: #fff;
 }
 
-h1 > span{
+h1{
     font-family: var(--font);
     font-size: 1.5rem;
     font-weight: var(--bold);
@@ -60,6 +60,9 @@ h1 > span{
     background-color: var(--accent);
     border-radius: 5px;
     width: 300px;
+    overflow-wrap: break-word;
+    width: 15rem;
+    padding: 5px 18px
 }
 
 .banner > p{
@@ -103,6 +106,7 @@ h1 > span{
     font-family: var(--font);
     font-size: .8rem;
     overflow-wrap: break-word;
+    width: 13rem;
 }
 
 .tnc a{
@@ -120,7 +124,7 @@ h1 > span{
     border-radius: 3px;
     background-color: var(--base2);
     color: #fff;
-    text-transform: capitalize;
+    text-transform: uppercase;
     cursor: pointer
 }
 
@@ -145,8 +149,59 @@ h1 > span{
 .attribution { font-size: 11px; text-align: center; margin: auto;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 960px){
+    .heading{
+        margin-top: 180px;
+        position: relative;
+    }
+    
 
+    h1{
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .sub{
+        overflow-wrap: break-word;
+        text-align: left;
+        width: 25rem;
+        position: relative;
+        font-size: .7rem;
+        margin-bottom: 200px;
+    }
+
+    .banner{
+        overflow-wrap: none;
+        width: 25rem;
+        position: relative;
+        top: 100px;
+    }
+
+    .form{
+        position: relative;
+    }
+
+    .form .form-card{
+        width: 400px;
+    }
+
+    .form .form-card .form-control input{
+        width: 350px;
+        border-radius: 3px;
+        padding-left: 1.5rem;
+    }
+
+    .form-cta{
+        width: 350px;
+        border-radius: 5px;
+    }
+
+    .tnc{
+        font-size: .6rem;
+        overflow-wrap: none;
+        width: 25rem; 
+    }
+    
     .container{
         background-image: url(./images/bg-intro-desktop.png);
         background-color: var(--base);
@@ -162,6 +217,7 @@ h1 > span{
         "sub sub form form"
         "footer footer footer footer";
         grid-column-gap: 10px;       
+        position: relative;
     }
 }
 
