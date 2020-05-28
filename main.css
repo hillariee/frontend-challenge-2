@@ -29,40 +29,10 @@ body{
 
 .heading{
     grid-area: heading;
-}
-
-.sub{
-    grid-area: sub;
-}
-
-.banner{
-    grid-area: banner;
-}
-
-.form{
-    grid-area: form;
-}
-
-
-.container{
-    /* background-image: url(./images/bg-intro-mobile.png); */
-    background-color: var(--base);
-    display: grid;
-    justify-content: center;
-    grid-template-areas:
-    "heading heading"
-    "sub sub"
-    "banner banner"
-    "form form";
-    grid-row-gap: 10px;
-}
-
-.heading{
     display: flex;
     flex-direction: column;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
     color: #fff;
 }
-
 
 h1 > span{
     font-family: var(--font);
@@ -72,6 +42,7 @@ h1 > span{
 }
 
 .sub{
+    grid-area: sub;
     font-family: var(--font);
     font-size: .8rem;
     font-weight: var(--mid);
@@ -82,8 +53,8 @@ h1 > span{
     color: #fff;
 }
 
-
 .banner{
+    grid-area: banner;
     text-align: center;
     margin: auto;
     background-color: var(--accent);
@@ -101,11 +72,12 @@ h1 > span{
     font-weight: var(--semibold);
 }
 
-
 .form{
+    grid-area: form;
     margin: auto;
     text-align: center;
 }
+
 
 .form .form-card{
     border: 1px solid black;
@@ -149,16 +121,31 @@ h1 > span{
     background-color: var(--base2);
     color: #fff;
     text-transform: capitalize;
+    cursor: pointer
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.container{
+    /* background-image: url(./images/bg-intro-mobile.png); */
+    background-color: var(--base);
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+    "heading heading"
+    "sub sub"
+    "banner banner"
+    "form form"
+    "footer footer";
+    grid-row-gap: 10px;
 }
 
 .attribution { font-size: 11px; text-align: center; margin: auto;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media only screen and (min-width: 768px){
-
-    /* body{
-        background-image: url(./images/bg-intro-desktop.png);
-    } */
 
     .container{
         background-image: url(./images/bg-intro-desktop.png);
@@ -168,10 +155,12 @@ h1 > span{
         height: calc(100vh - 20px);
         /* justify-content: space-evenly; */
         align-items: center;
+        grid-template-columns: 50px auto auto;
         grid-template-areas:
         "... ... banner banner"
         "heading heading form form"
-        "sub sub form form";
+        "sub sub form form"
+        "footer footer footer footer";
         grid-column-gap: 10px;       
     }
 }
