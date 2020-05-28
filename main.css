@@ -94,7 +94,7 @@ h1{
 }
 
 .form .form-card .form-control{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .form .form-card .form-control input{
@@ -103,6 +103,22 @@ h1{
     border: thin solid var(--neutral2);
     font-weight: var(--mid);
     font-family: var(--font);
+}
+
+.form .form-card .form-control img{
+    width: 20px;
+    position: relative;
+    top: 5px;
+    right: 10%;
+}
+
+.form .form-card .form-control small{
+    position: absolute;
+    left: 30%;
+    margin-top: 40px;
+    color: var(--base);
+    font-size: .7rem;
+    visibility: hidden;
 }
 
 .tnc{
@@ -179,7 +195,7 @@ h1{
         overflow-wrap: none;
         width: 25rem;
         position: relative;
-        top: 100px;
+        top: 80%;
     }
 
     .form{
@@ -194,6 +210,10 @@ h1{
         width: 350px;
         border-radius: 3px;
         padding-left: 1.5rem;
+    }
+
+    .form .form-card .form-control small{
+        margin-left: 150px; 
     }
 
     .form-cta{
