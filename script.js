@@ -25,7 +25,7 @@ function checkInputs() {
         setErrorFor(firstName, 'First name cannot be empty');
     }else{
         // return normal
-        return;
+        setSuccessFor(firstName);
     }
 
     // check last name 
@@ -33,25 +33,25 @@ function checkInputs() {
         setErrorFor(lastName, 'Last name cannot be empty');
     }else{
         // return normal
-        return;
+        setSuccessFor(lastName);
     }
 
     // check email
     if(emailValue === ''){
         setErrorFor(email, 'Email cannot be blank');
     }else if(!isValidEmail(emailValue)){
-        setErrorFor(email, 'Looks like this is not an email')
+        setErrorFor(email, 'Looks like this is not an email');
     }else{
-        return;
+        setSuccessFor(email);
     }
 
     // check password
     if(passwordValue === ''){
         setErrorFor(password, 'Password cannot be blank');
     }else if(!isValidPassword(passwordValue)){
-        setErrorFor(password,'at least 1 number, 1 uppercase and 1 lowercase letter. Also atleast 6 letters. sorry')
+        setErrorFor(password,'password isn\'t valid');
     }else{
-        return;
+        setSuccessFor(password);
     }
 }
 
@@ -67,16 +67,16 @@ function setErrorFor(input, message){
 
 function setSuccessFor(input){
      const formControl = input.parentElement;
-     formControl.className = 'form-control'
+     formControl.className = 'form-control';
 }
 
-function isValidEmail (email){
+function isValidEmail(email){
     return  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 
 //TODO: create a function to handle password validation;
-function isValidPassword (password){
+function isValidPassword(password){
     return /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/.test(password);
 }
 
