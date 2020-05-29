@@ -110,6 +110,7 @@ h1{
     position: relative;
     top: 5px;
     right: 10%;
+    visibility: hidden;
 }
 
 .form .form-card .form-control small{
@@ -119,6 +120,18 @@ h1{
     color: var(--base);
     font-size: .7rem;
     visibility: hidden;
+}
+
+.form .form-card .form-control.error input{
+    border-color: var(--base);
+}
+
+.form .form-card .form-control.error img{
+    visibility: visible;
+}
+
+.form .form-card .form-control.error small{
+    visibility: visible;
 }
 
 .tnc{
